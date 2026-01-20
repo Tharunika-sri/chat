@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Chat UI</title>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background: #ececec;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .chat-container {
+        width: 320px;
+        height: 520px;
+        background: #fff;
+        border-radius: 12px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+
+
+    .chat-header {
+        padding: 15px;
+        background: #075e54;
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: #ccc;
+    }
+
+    .name {
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    
+    .chat-body {
+        flex: 1;
+        padding: 15px;
+        background: #e5ddd5;
+        overflow-y: auto;
+    }
+
+    .message {
+        max-width: 75%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border-radius: 8px;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .received {
+        background: #fff;
+        align-self: flex-start;
+    }
+
+    .sent {
+        background: #dcf8c6;
+        align-self: flex-end;
+    }
+
+    
+    .chat-footer {
+        padding: 10px;
+        background: #f0f0f0;
+        display: flex;
+        gap: 10px;
+    }
+
+    .chat-footer input {
+        flex: 1;
+        padding: 8px 10px;
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        outline: none;
+    }
+
+    .send-btn {
+        background: #075e54;
+        color: white;
+        border: none;
+        padding: 8px 14px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+</style>
+</head>
+
+<body>
+
+<div class="chat-container">
+
+    
+    <div class="chat-header">
+        <div class="avatar"></div>
+        <div class="name">Alex</div>
+    </div>
+
+    
+    <div class="chat-body">
+        <div class="message received">Hey! How are you?</div>
+        <div class="message sent">I'm good 😊 What about you?</div>
+        <div class="message received">Doing great! Want to catch up later?</div>
+        <div class="message sent">Sure 👍</div>
+    </div>
+
+    
+    <div class="chat-footer">
+        <input type="text" placeholder="Type a message...">
+        <button class="send-btn">➤</button>
+    </div>
+
+</div>
+
+</body>
+</html>
